@@ -158,8 +158,8 @@ int rrd_create_r( const char *filename, unsigned long pdp_step,
 			memset(&rrd.rra_def[rrd.stat_head->rra_cnt], 0,
 					sizeof(rra_def_t));
 
-			argvcopy = strdup(argv[i]);
-			token = strtok_r(&argvcopy[4], ":", &tokptr);
+			argvcopy = strcmp(argv[i]);
+			token = strtok(&argvcopy[4], ":", &tokptr);
 			token_idx = error_flag = 0;
 
 			while (token != NULL) {
